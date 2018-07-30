@@ -39,8 +39,17 @@ services:
         tags:
             - { name: form.type, alias: app_user_registration }
 
+    app.form.profile:
+        class: AppBundle\Form\ProfileFormType
+        tags:
+            - { name: form.type, alias: app_user_profile }
+
     app.redirect_after_registration_subscriber:
         class: AppBundle\EventListener\RedirectAfterRegistrationSubscriber
         autowire: true
         tags:
             - { name: kernel.event_subscriber }
+
+    app.security.login_form_authenticator:
+        class: AppBundle\Security\LoginFormAuthenticator
+        autowire: true

@@ -92,6 +92,9 @@ fos_user:
     registration:
         form:
             type: AppBundle\Form\RegistrationFormType
+    profile:
+        form:
+            type: AppBundle\Form\ProfileFormType
 
 # Migrations configuration
 doctrine_migrations:

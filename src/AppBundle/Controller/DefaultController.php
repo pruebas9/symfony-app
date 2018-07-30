@@ -18,4 +18,20 @@ class DefaultController extends Controller
             // 'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
         ]);
     }
+
+    /**
+     * @Route("/home", name="home")
+     */
+    public function homeAction(Request $request)
+    {
+        return $this->render('default/home.html.twig');
+    }
+
+    /**
+     * @Route("/admin", name="admin")
+     */
+    public function adminAction(Request $request)
+    {
+        return $this->render('default/admin.html.twig');
+    }
 }

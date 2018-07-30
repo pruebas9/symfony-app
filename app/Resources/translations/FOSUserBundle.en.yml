@@ -2,3 +2,11 @@ registration:
     confirmed: 'Congrats %username%, your account is now activated.'
     flash:
         user_created: 'The user %username% has been created successfully.'
+
+security:
+    login:
+        username: Username
+        email: Email
+        password: Password
+        remember_me: 'Remember me'
+        submit: 'Log in'
