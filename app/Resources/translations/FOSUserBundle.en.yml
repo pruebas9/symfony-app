@@ -1,0 +1,4 @@
+registration:
+    confirmed: 'Congrats %username%, your account is now activated.'
+    flash:
+        user_created: 'The user %username% has been created successfully.'

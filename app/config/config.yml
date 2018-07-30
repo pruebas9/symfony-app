@@ -89,3 +89,14 @@ fos_user:
         # sender_name: "%mailer_user%"
         address: "correo@correo.com"
         sender_name: "nombre random"
+    registration:
+        form:
+            type: AppBundle\Form\RegistrationFormType
+
+# Migrations configuration
+doctrine_migrations:
+    dir_name: "%kernel.root_dir%/DoctrineMigrations"
+    namespace: Application\Migrations
+    table_name: migration_versions
+    name: Application Migrations
+    organize_migrations: false # Version >=1.2 Possible values are: "BY_YEAR", "BY_YEAR_AND_MONTH", false
