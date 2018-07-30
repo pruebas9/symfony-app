@@ -18,7 +18,8 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('firstName')
-            ->add('phoneNumber');
+            ->add('phoneNumber')
+            ->remove('username');
     }
 
     public function getParent()

@@ -94,5 +94,18 @@ class User extends BaseUser
     {
         return $this->phoneNumber;
     }
+
+    /**
+     * Overridden so that username is now optional
+     *
+     * @param string $email
+     * @return User
+     */
+    public function setEmail($email)
+    {
+        $this->setUsername($email);
+        
+        return parent::setEmail($email);
+    }
 }
 
