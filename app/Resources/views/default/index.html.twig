@@ -1,5 +1,58 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h3>Hello World from my application!!</h3>
+<nav class="app-bar navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand app-name" href="#">App-Symfony</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <div class="navbar-form navbar-right">
+            {% if is_granted('ROLE_USER') %}
+                <a href="{{ path('fos_user_security_logout') }}" class="btn btn-normal-inverse">logout</a>
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}" class="btn btn-normal-inverse">login</a>
+                <a href="{{ path('fos_user_registration_register') }}" class="btn btn-normal-inverse">Sign in</a>
+            {% endif %}
+        </div>
+      </div><!--/.navbar-collapse -->
+    </div>
+  </nav>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron mgt30">
+    <div class="container centrado">
+      <h1>Homepage</h1>
+      <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices.</p>
+      <p><a class="btn btn-normal btn-lg" href="#" role="button">Start Now!</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <!-- <div class="col-md-6">
+        <h2>Content 1</h2>
+        <p>Praesent blandit dolor. Sed non quam. In vel mi sit amet augue congue elementum. Morbi in ipsum sit amet pede facilisis laoreet. Donec lacus nunc, viverra nec, blandit vel, egestas et, augue. Vestibulum tincidunt malesuada tellus. Ut ultrices ultrices enim. Curabitur sit amet mauris.</p>
+        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+      </div>
+      <div class="col-md-6">
+        <h2>Content 2</h2>
+        <p>Aenean quam. In scelerisque sem at dolor. Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor. Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet. Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.</p>
+        <p><a class="btn btn-default" href="#" role="button">View details »</a></p>
+     </div> -->
+    </div>
+
+    <hr>
+    <footer>
+      <p>© 2018 Website for test.</p>
+    </footer>
+  </div> <!-- /container -->
+
 {% endblock %}

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.app-name {
+    color: #FFF !important;
+}
+.app-bar {
+    background-color: #3a3a3a;
+    border-color: #3a3a3a;
+}
+
+.btn-normal {
+    /* background: #95a3b3; */
+    border: 1px solid #3a3a3a;
+    color: #3a3a3a !important;
+}
+.btn-normal:hover {
+    background: #303030;
+    color: #ffffff !important;
+}
+.btn-normal-inverse {
+    background: #3a3a3a;
+    border: 1px solid #84dc84;
+    color: #ffffff !important;
+}
+.btn-normal-inverse:hover {
+    background: #68C06A;
+}
+
+.centrado {
+    text-align: center;
+}
+.mgt30 {
+    margin-top: 30px !important;
+}
