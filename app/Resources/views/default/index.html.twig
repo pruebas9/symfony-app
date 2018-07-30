@@ -1,7 +1,8 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-<nav class="app-bar navbar navbar-inverse navbar-fixed-top">
+<header class="header">
+  <nav class="app-bar navbar navbar-inverse">
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -10,7 +11,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand app-name" href="#">App-Symfony</a>
+        <a class="navbar-brand app-name" href="{{ path('homepage') }}">App-Symfony</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <div class="navbar-form navbar-right">
@@ -24,9 +25,13 @@
       </div><!--/.navbar-collapse -->
     </div>
   </nav>
+</header>
+
+<div class="main-content"></div>
+  {% block content %}
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron mgt30">
+  <div class="jumbotron">
     <div class="container centrado">
       <h1>Homepage</h1>
       <p>Nam nec ante. Sed lacinia, urna non tincidunt mattis, tortor neque adipiscing diam, a cursus ipsum ante quis turpis. Nulla facilisi. Ut fringilla. Suspendisse potenti. Nunc feugiat mi a tellus consequat imperdiet. Vestibulum sapien. Proin quam. Etiam ultrices.</p>
@@ -55,4 +60,7 @@
     </footer>
   </div> <!-- /container -->
 
-{% endblock %}
+  {% endblock %} 
+</div>
+
+{% endblock %} 
